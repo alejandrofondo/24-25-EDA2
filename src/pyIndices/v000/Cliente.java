@@ -5,16 +5,19 @@ public class Cliente {
 
         cargarDatos(gestor);
 
-//        gestor.imprimirDatos();
+        gestor.imprimirDatos();
 
-//        System.out.println("> ESTUDIANTES DE PROGRAMACIÓN 2");
-//        imprimirDataset(gestor.buscarPorIndice("Asignatura", "Programación 2"));
+        System.out.println("> ESTUDIANTES DE PROGRAMACIÓN 2");
+        imprimirDataset(gestor.buscarPorIndice("Asignatura", "Programación 2"));
 
-//        System.out.println("> ESTUDIANTE CON ID 1003");
-//        imprimirDataset(gestor.buscarPorIndice("ID", "1003"));
+        System.out.println("> ESTUDIANTE CON ID 1003");
+        imprimirDataset(gestor.buscarPorIndice("ID", "1003"));
 
-//        System.out.println("> ASIGNATURAS DISPONIBLES");
-//        imprimirDataset(gestor.obtenerValoresUnicos("Asignatura"));
+        System.out.println("> ASIGNATURAS DISPONIBLES");
+        imprimirDataset(gestor.obtenerValoresUnicos("Asignatura"));
+
+        System.out.println("> IDS DISPONIBLES (ORDENADOS)");
+        imprimirDataset(gestor.obtenerValoresUnicos("ID"));
     }
 
     private static void cargarDatos(GestorCSV gestor) {

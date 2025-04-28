@@ -35,7 +35,12 @@ public class GestorCSV {
             return;
         }
 
-        indices[indiceColumna] = new Indice(filas);
+        if (nombreColumna.equals("ID")) {
+            indices[indiceColumna] = new IndiceOrdenado(filas);
+        } else {
+            indices[indiceColumna] = new Indice(filas);
+        }
+        
         columnaIndexada[indiceColumna] = true;
 
         for (int i = 0; i < filas; i++) {
@@ -96,7 +101,7 @@ public class GestorCSV {
             System.out.printf("%-25.20s", cabeceras[i]);
         }
         System.out.println();
-        System.out.println("=".repeat(60));
+        System.out.println("=".repeat(90));
 
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
@@ -104,6 +109,6 @@ public class GestorCSV {
             }
             System.out.println();
         }
-        System.out.println("=".repeat(60));
+        System.out.println("=".repeat(90));
     }
 }
